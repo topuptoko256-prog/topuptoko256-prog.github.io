@@ -108,6 +108,49 @@
       <div class="game-info">
         <h3>Arena of Valor</h3>
         <p>TiMi Studio</p>
+        </div>
+
+    <div class="game-card">
+      <img src="https://cdn.unipin.com/images/icon_product_pages/1604645667-icon-pubgm.png" alt="PUBG Mobile">
+      <div class="game-info">
+        <h3>PUBG Mobile</h3>
+        <p>Krafton</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tempat order (muncul setelah klik game) -->
+  <div id="orderSection" style="padding:20px; max-width:800px; margin:auto;"></div>
+
+  <footer>
+    © 2025 TaufiqStore. Semua layanan top up cepat & aman.
+  </footer>
+
+  <script>
+    function openOrderFF() {
+      document.getElementById("orderSection").innerHTML = `
+        <h2>Free Fire - Order</h2>
+        <label>User ID:</label>
+        <input type="text" placeholder="Masukkan User ID" style="width:100%;padding:12px;border-radius:8px;margin-bottom:15px;border:1px solid #ccc;">
+
+        <h3>Pilih Nominal</h3>
+        <button style="padding:10px 20px;border-radius:10px;border:none;margin:5px;">5 Diamonds</button>
+        <button style="padding:10px 20px;border-radius:10px;border:none;margin:5px;">12 Diamonds</button>
+        <button style="padding:10px 20px;border-radius:10px;border:none;margin:5px;">50 Diamonds</button>
+
+        <br><br>
+        <button style="background:purple;color:white;padding:12px 20px;border-radius:10px;width:100%;font-size:16px;border:none;">
+          Pesan Sekarang
+        </button>
+      `;
+    }
+
+    // bikin Free Fire bisa diklik
+    document.querySelectorAll(".game-card")[1].onclick = openOrderFF;
+  </script>
+
+</body>
+</html>
       </div>
     </div>
 
