@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>TaufiqStore</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaufiqStore - Top Up Game</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #7b2ff7, #f107a3);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    .game-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .game-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .game-info {
+      padding: 10px;
+    }
+
+    .game-info h3 {
+      font-size: 1em;
+      margin: 5px 0;
+    }
+
+    .game-info p {
+      font-size: 0.9em;
+      color: #666;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-  <h1>Selamat datang di TaufiqStore</h1>
-  <p>Top up Free Fire & game lainnya cepat, aman, dan terpercaya.</p>
-</body>
-</html>
+
+  <header>🎮 TaufiqStore - Top Up Game</header>
+
+  <div class="game-container">
+    <div class="game-card">
+      <img src="https://cdn.unipin.com/images/icon_product_pages/1604644816-icon-mlbb.png" alt="Mobile Legends">
+      <div class="game-info">
+        <h3>Mobile Legends</h3>
+        <p>Moonton</p>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="https://cdn.unipin.com/images/icon_product_pages/1604644997-icon-ff.png" alt="Free Fire">
+      <div class="game-info">
+        <h3>Free Fire</h3>
+        <p>Garena</p>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="https://cdn.unipin.com/images/icon_product_pages/1604645244-icon-codm.png" alt="Call of Duty">
+      <div class="game-info">
+        <h3>Call of Duty Mobile</h3>
+        <p>Activision</p>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="https://cdn.unipin.com/images/icon_product_pages/1604645523-icon-aov.png" alt="AOV">
+      <div class="game-info">
+        <h3>Arena of Valor</h3>
+        <p>TiMi Studio</p>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="https://cdn.unipin.com/images/icon_product_pages/1604645667-icon-pubgm.png" alt="PUBG Mobile">
+      <div class="game-info">
+        <h3
