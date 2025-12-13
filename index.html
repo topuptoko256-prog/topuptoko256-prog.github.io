@@ -1,160 +1,82 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TaufiqStore - Top Up Game</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background:#0f172a; color:#fff; padding:16px; }header {
+  background: linear-gradient(135deg,#7c3aed,#ec4899);
+  padding:16px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:bold;
+  font-size:20px;
+  margin-bottom:20px;
+}
 
-    header {
-      background: linear-gradient(90deg, #7b2ff7, #f107a3);
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 1.3em;
-      font-weight: bold;
-    }
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap:14px;
+}
 
-    .game-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+.card {
+  background:#111827;
+  border-radius:14px;
+  padding:16px;
+  text-align:center;
+  transition:0.3s;
+  cursor:pointer;
+}
 
-    .game-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: 0.3s;
-    }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
 
-    .game-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+.game {
+  font-size:16px;
+  font-weight:bold;
+  margin-bottom:6px;
+}
 
-    .game-card img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-    }
+.publisher {
+  font-size:12px;
+  color:#9ca3af;
+}
 
-    .game-info {
-      padding: 10px;
-    }
+.btn {
+  display:block;
+  margin-top:12px;
+  background:#22c55e;
+  color:#000;
+  padding:8px;
+  border-radius:8px;
+  font-weight:bold;
+  text-decoration:none;
+  font-size:14px;
+}
 
-    .game-info h3 {
-      font-size: 1em;
-      margin: 5px 0;
-    }
+footer {
+  margin-top:30px;
+  background:#020617;
+  padding:14px;
+  border-radius:12px;
+  text-align:center;
+  font-size:13px;
+  color:#cbd5f5;
+}
 
-    .game-info p {
-      font-size: 0.9em;
-      color: #666;
-      margin: 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #fff;
-      font-size: 0.9em;
-      color: #777;
-    }
   </style>
 </head>
-<body>
-
-  <header>🎮 TaufiqStore - Top Up Game</header>
-
-  <div class="game-container">
-    <div class="game-card">
-      <img src="https://cdn.unipin.com/images/icon_product_pages/1604644816-icon-mlbb.png" alt="Mobile Legends">
-      <div class="game-info">
-        <h3>Mobile Legends</h3>
-        <p>Moonton</p>
-      </div>
-    </div>
-
-    <div class="game-card">
-      <img src="https://cdn.unipin.com/images/icon_product_pages/1604644997-icon-ff.png" alt="Free Fire">
-      <div class="game-info">
-        <h3>Free Fire</h3>
-        <p>Garena</p>
-      </div>
-    </div>
-
-    <div class="game-card">
-      <img src="https://cdn.unipin.com/images/icon_product_pages/1604645244-icon-codm.png" alt="Call of Duty">
-      <div class="game-info">
-        <h3>Call of Duty Mobile</h3>
-        <p>Activision</p>
-      </div>
-    </div>
-
-    <div class="game-card">
-      <img src="https://cdn.unipin.com/images/icon_product_pages/1604645523-icon-aov.png" alt="AOV">
-      <div class="game-info">
-        <h3>Arena of Valor</h3>
-        <p>TiMi Studio</p>
-        </div>
-
-    <div class="game-card">
-      <img src="https://cdn.unipin.com/images/icon_product_pages/1604645667-icon-pubgm.png" alt="PUBG Mobile">
-      <div class="game-info">
-        <h3>PUBG Mobile</h3>
-        <p>Krafton</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tempat order (muncul setelah klik game) -->
-  <div id="orderSection" style="padding:20px; max-width:800px; margin:auto;"></div>
-
-  <footer>
-    © 2025 TaufiqStore. Semua layanan top up cepat & aman.
-  </footer>
-
-  <script>
-    function openOrderFF() {
-      document.getElementById("orderSection").innerHTML = `
-        <h2>Free Fire - Order</h2>
-        <label>User ID:</label>
-        <input type="text" placeholder="Masukkan User ID" style="width:100%;padding:12px;border-radius:8px;margin-bottom:15px;border:1px solid #ccc;">
-
-        <h3>Pilih Nominal</h3>
-        <button style="padding:10px 20px;border-radius:10px;border:none;margin:5px;">5 Diamonds</button>
-        <button style="padding:10px 20px;border-radius:10px;border:none;margin:5px;">12 Diamonds</button>
-        <button style="padding:10px 20px;border-radius:10px;border:none;margin:5px;">50 Diamonds</button>
-
-        <br><br>
-        <button style="background:purple;color:white;padding:12px 20px;border-radius:10px;width:100%;font-size:16px;border:none;">
-          Pesan Sekarang
-        </button>
-      `;
-    }
-
-    // bikin Free Fire bisa diklik
-    document.querySelectorAll(".game-card")[1].onclick = openOrderFF;
-  </script>
-
-</body>
-</html>
-      </div>
-    </div>
-
-    <div class="game-card">
-      <img src="https://cdn.unipin.com/images/icon_product_pages/1604645667-icon-pubgm.png" alt="PUBG Mobile">
-      <div class="game-info">
-        <h3
+<body><header>🎮 TaufiqStore - Top Up Game</header><section class="grid">
+  <div class="card">
+    <div class="game">Mobile Legends</div>
+    <div class="publisher">Moonton</div>
+    <a class="btn" href="#">Order</a>
+  </div>  <div class="card">
+    <div class="game">Free Fire</div>
+    <div class="publisher">Garena</div>
+    <a class="btn" href="#">Order</a>
+  </div>  <div class="card">
